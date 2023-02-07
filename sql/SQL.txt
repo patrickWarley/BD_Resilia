@@ -1,0 +1,30 @@
+CREATE TABLE alunos(
+  cpf VARCHAR(15) PRIMARY KEY NOT NULL,
+  nome VARCHAR(20),
+  sobrenome VARCHAR(40),
+  idade INT,
+  data_de_nascimento DATE
+);
+
+CREATE TABLE cursos(
+  cod_curso INT PRIMARY KEY NOT NULL,
+  nome VARCHAR(20),
+  carga_horaria INT,
+  descr VARCHAR(100),
+  num_turmas INT
+);
+
+CREATE TABLE turmas(
+  cod_turma INT PRIMARY KEY NOT NULL,
+  horario INT,
+  data_de_inicio DATE,
+  turno VARCHAR(3),
+  aberta BOOLEAN
+);
+
+CREATE TABLE matricula(
+  cod_turma INT PRIMARY KEY NOT NULL,
+  cpf_aluno VARCHAR(15)
+  ativa BOOLEAN
+)
+
